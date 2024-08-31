@@ -16,11 +16,13 @@ type Story = StoryObj<typeof Picture>;
 
 export const Default: Story = {
   args: {
-    srcSP: "/src/assets/images/brand_logo.png",
-    srcWebpPC: "/src/assets/images/brand_logo.png.webp",
-    srcPC: "/src/assets/images/brand_logo.png",
-    srcWebpSP: "/src/assets/images/brand_logo.png.webp",
-    altText: "Storybook",
+    srcSP: "/src/assets/images/750x860.png",
+    srcWebpSP: "/src/assets/images/750x860.webp",
+    srcPC: "/src/assets/images/1920x520.png",
+    srcWebpPC: "/src/assets/images/1920x520.webp",
+    width: 375,
+    height: 430,
+    altText: "carouse1",
     breakpoint: 961
   },
 };
