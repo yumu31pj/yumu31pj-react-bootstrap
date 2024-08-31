@@ -7,7 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@/': `${__dirname}/src/`,
-      '~/': `${__dirname}/public/`
+      '~/': `${__dirname}/public/`,
+      '@globals': `${__dirname}/src/scss/globals`
     },
   },
 })

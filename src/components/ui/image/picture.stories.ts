@@ -20,6 +20,7 @@ export const Default: Story = {
     srcWebpPC: "/src/assets/images/brand_logo.png.webp",
     srcPC: "/src/assets/images/brand_logo.png",
     srcWebpSP: "/src/assets/images/brand_logo.png.webp",
-    altText: "Storybook"
+    altText: "Storybook",
+    breakpoint: 961
   },
 };

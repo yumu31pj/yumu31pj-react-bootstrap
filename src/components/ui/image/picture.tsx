@@ -7,8 +7,12 @@ const Picture = (props: PictureProps) => {
     <picture className={styles['responsive-image']}>
       {srcWebpPC && <source srcSet={srcWebpPC} media={`(min-width: ${breakpoint}px)`} type="image/webp" />}
       {srcWebpSP && <source srcSet={srcWebpSP} type="image/webp" />}
-      <source srcSet={srcPC} media={`(min-width: ${breakpoint}px)`} {...(width && { width: width })} {...(height && { height: height })} />
-      <img src={srcSP} {...(width && { width: width })} {...(height && { height: height })} alt={altText} />
+      <source srcSet={srcPC} media={`(min-width: ${breakpoint}px)`} />
+      <img 
+        src={srcSP} 
+        {...(width && { width: width })} 
+        {...(height && { height: height })} 
+        alt={altText} />
     </picture>
   )
 }

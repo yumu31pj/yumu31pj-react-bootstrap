@@ -17,3 +17,7 @@ export type PictureProps = {
   altText: string;
   breakpoint?: number;
 }
+
+export type PictureItemsProps = {
+  pictureItems: PictureProps[];
+}
