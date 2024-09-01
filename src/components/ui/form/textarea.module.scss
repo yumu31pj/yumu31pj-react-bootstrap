@@ -12,7 +12,10 @@
       color: transparent;
     }
 
-    &__active {
+    // &__active {
+    //   border: 2px solid var(--color-primary);
+    // }
+    &:forcus {
       border: 2px solid var(--color-primary);
     }
   }

@@ -25,7 +25,7 @@ const InputText = (props: InputTextProps) => {
       }
       <input type="text" name={name}
         id={id}
-        className={`${styles['input-text__field']}${isActive ? ` ${styles['input-text__field--active']}` : ""}`}
+        className={styles['input-text__field']}
         placeholder={placeholder}
         value={text}
         required={!!isRequired}

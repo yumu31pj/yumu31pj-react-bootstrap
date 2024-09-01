@@ -25,7 +25,7 @@ const TextArea = (props: TextAreaProps) => {
       }
       <textarea name={name}
         id={id}
-        className={`${styles['textarea__field']}${isActive ? ` ${styles['textarea__field--active']}` : ""}`}
+        className={styles['textarea__field']}
         placeholder={placeholder}
         value={text}
         required={!!isRequired}

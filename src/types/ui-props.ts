@@ -99,6 +99,7 @@ export type InputTextProps = {
   labelText?: string;
   placeholder?: string;
   isRequired?: boolean;
+  value?: string;
 }
 
 export type TextAreaProps = {
@@ -107,7 +108,9 @@ export type TextAreaProps = {
   labelText?: string;
   placeholder?: string;
   isRequired?: boolean;
+  value?: string;
 }
+
 export type ZipCodeType = {
   id?: string;
   name: string;
