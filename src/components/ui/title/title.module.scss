@@ -7,37 +7,38 @@
   &--h1 {
     font-size: 3.6rem;
     @include g.media('tb') {
-      font-size: 4rem;
+      font-size: g.auto_clamp(36, 521, 40, 1440);
     }
   }
   &--h2 {
     font-size: 2.8em;
     @include g.media('tb') {
-      font-size: 3.6rem;
+      font-size: g.auto_clamp(28, 521, 36, 1440);
     }
   }
   &--h3 {
     font-size: 2.4rem;
+    line-height: 1.1;
     @include g.media('tb') {
-      font-size: 2.8rem;
+      font-size: g.auto_clamp(24, 521, 28, 1440);
     }
   }
   &--h4 {
     font-size: 2rem;
     @include g.media('tb') {
-      font-size: 2.4rem;
+      font-size: g.auto_clamp(20, 521, 24, 1440);
     }
   }
   &--h5 {
     font-size: 1.8rem;
     @include g.media('tb') {
-      font-size: 2rem;
+      font-size: g.auto_clamp(18, 521, 20, 1440);
     }
   }
   &--h6 {
     font-size: 1.6rem;
     @include g.media('tb') {
-      font-size: 1.8rem;
+      font-size: g.auto_clamp(16, 521, 18, 1440);
     }
   }
 }
