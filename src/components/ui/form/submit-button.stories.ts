@@ -14,22 +14,8 @@ export default meta;
 
 type Story = StoryObj<typeof SubmitButton>;
 
-export const Unconfirmed: Story = {
+export const Primary: Story = {
   args: {
-    buttonText: {
-      initText: "Confirm",
-      submitText: "Send"
-    },
-    isConfirmd: false
-  },
-};
-
-export const Confirmed: Story = {
-  args: {
-    buttonText: {
-      initText: "Confirm",
-      submitText: "Send"
-    },
-    isConfirmd: true
-  },
+    buttonText: "Send"
+  }
 };
