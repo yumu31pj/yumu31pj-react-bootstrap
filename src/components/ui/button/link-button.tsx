@@ -3,7 +3,7 @@ import styles from "./link-button.module.scss";
 type LinkButtonProps = {
   linkText: string;
   linkTo: string;
-  type?: 'flip' | '3d'
+  type?: 'flip' | '3d' | 'label'
   isExternal?: boolean;
 }
 

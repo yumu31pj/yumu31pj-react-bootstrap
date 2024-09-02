@@ -1,3 +1,5 @@
+@use "@globals" as g;
+
 .link-button {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -62,6 +64,28 @@
       box-shadow: none;
       position: relative;
       top: 3px;
+    }
+  }
+
+  &--label {
+    background: var(--color-primary);
+    border-radius: 30px;
+    color: var(--color-white);
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 20px;
+    width: unset;
+  
+    &:hover {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary)
+    }
+  
+    @include g.media('tb') {
+      font-size: 1.6rem;
     }
   }
 }

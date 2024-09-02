@@ -25,7 +25,7 @@ export const Primary: Story = {
 
 export const flip: Story = {
   args: {
-    linkText: "To About",
+    linkText: "Flip Link",
     linkTo: "#",
     isExternal: false,
     type: "flip"
@@ -34,9 +34,18 @@ export const flip: Story = {
 
 export const ThreeD: Story = {
   args: {
-    linkText: "To About",
+    linkText: "Three D Link",
     linkTo: "#",
     isExternal: false,
     type: "3d"
+  },
+};
+
+export const label: Story = {
+  args: {
+    linkText: "Label",
+    linkTo: "#",
+    isExternal: false,
+    type: "label"
   },
 };
