@@ -1,0 +1,20 @@
+.fluffy {
+  overflow: hidden;
+
+  & picture img {
+    width: 100%;
+    height: auto;
+    animation: animationZoom1 3s ease-in-out forwards;
+
+    @keyframes animationZoom1 {
+      0% {
+        opacity: .1;
+        transform: scale(1);
+      }
+      100% { 
+        opacity: 1;
+        transform:scale(1.1)
+      } 
+    }
+  }
+}
