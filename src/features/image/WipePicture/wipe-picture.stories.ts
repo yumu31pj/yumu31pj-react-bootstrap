@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import FluffyPicture from './fluffy-picture';
+import WipePicture from './wipe-picture';
 
-const meta: Meta<typeof FluffyPicture> = {
-  title: 'features/images/FluffyPicture',
-  component: FluffyPicture,
+const meta: Meta<typeof WipePicture> = {
+  title: 'features/images/WipePicture',
+  component: WipePicture,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -12,7 +12,7 @@ const meta: Meta<typeof FluffyPicture> = {
 
 export default meta;
 
-type Story = StoryObj<typeof FluffyPicture>;
+type Story = StoryObj<typeof WipePicture>;
 
 export const Default: Story = {
   args: {
