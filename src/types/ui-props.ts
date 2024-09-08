@@ -7,6 +7,10 @@ export type LinkProps = {
   isExternal?: boolean;
 }
 
+export type LinkItemsProps = {
+  linkItems: LinkProps[];
+}
+
 /**
  * Props for picture tag
  */
@@ -117,4 +121,25 @@ export type ZipCodeType = {
   labelText?: string;
   placeholder?: string;
   isRequired?: boolean;
+}
+
+/**
+ * FAQ
+ */
+export type FAQTextProps = {
+  question: string;
+  answer: string;
+}
+
+export type FAQListProps = {
+  faqItems: FAQTextProps[];
+}
+
+/**
+ * Buttons
+ */
+
+export type HamburgerButtonType = {
+  isHamburgerOpen: boolean;
+  toggleIsHamburgerOpen: React.MouseEventHandler<HTMLButtonElement>;
 }
