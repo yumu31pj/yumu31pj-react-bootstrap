@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ScrollInContent } from './scroll-in-wrapper';
+import { ScrollInWrapper } from './scroll-in-wrapper';
 
-const meta: Meta<typeof ScrollInContent> = {
-  title: 'ui/Layouts/ScrollInContent',
-  component: ScrollInContent,
+const meta: Meta<typeof ScrollInWrapper> = {
+  title: 'ui/Layouts/ScrollInWrapper',
+  component: ScrollInWrapper,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -12,7 +12,7 @@ const meta: Meta<typeof ScrollInContent> = {
 
 export default meta;
 
-type Story = StoryObj<typeof ScrollInContent>;
+type Story = StoryObj<typeof ScrollInWrapper>;
 
 export const Default: Story = {
   args: {

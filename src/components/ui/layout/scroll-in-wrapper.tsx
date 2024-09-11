@@ -3,7 +3,7 @@ import useScrollInView from "../../../hooks/useScrollInView";
 import { WrapperProps } from "../../../types/ui-props";
 import styles from "./scroll-in-wrapper.module.scss";
 
-const ScrollInContent = (props: WrapperProps) => {
+const ScrollInWrapper = (props: WrapperProps) => {
   const {type, children} = props;
   const ref = useScrollInView(styles["in-view"]);
 
@@ -14,4 +14,4 @@ const ScrollInContent = (props: WrapperProps) => {
   );
 }
 
-export { ScrollInContent };
+export { ScrollInWrapper };
