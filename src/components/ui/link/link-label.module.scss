@@ -2,7 +2,6 @@
 
 .link-label {
   background: var(--color-primary);
-  border-radius: 30px;
   color: var(--color-white);
   display: inline-block;
   padding: 0 15px;
@@ -13,6 +12,9 @@
     border: 1px solid var(--color-primary);
     color: var(--color-primary)
   }
+
+  &--rectangle {border-radius: 0;}
+  &--round {border-radius: 30px;}
 
   @include g.media('tb') {
     font-size: 1.6rem;

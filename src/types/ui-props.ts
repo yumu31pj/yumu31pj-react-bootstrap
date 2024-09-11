@@ -143,3 +143,11 @@ export type HamburgerButtonType = {
   isHamburgerOpen: boolean;
   toggleIsHamburgerOpen: React.MouseEventHandler<HTMLButtonElement>;
 }
+
+/**
+ * Layout
+ */
+export type WrapperProps = {
+  type: "div" | "section";
+  children: React.ReactNode;
+}

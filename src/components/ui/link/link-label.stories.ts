@@ -14,9 +14,25 @@ export default meta;
 
 type Story = StoryObj<typeof LinkLabel>;
 
-export const Primary: Story = {
+export const NoShape: Story = {
   args: {
     linkText: "Category",
     linkTo: "*",
+  },
+};
+
+export const Rectangle: Story = {
+  args: {
+    linkText: "Category",
+    linkTo: "*",
+    shape: "rectangle",
+  },
+};
+
+export const Round: Story = {
+  args: {
+    linkText: "Category",
+    linkTo: "*",
+    shape: "round",
   },
 };
