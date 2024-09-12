@@ -49,3 +49,12 @@ export const label: Story = {
     type: "label"
   },
 };
+
+export const movingBorder: Story = {
+  args: {
+    linkText: "Label",
+    linkTo: "#",
+    isExternal: false,
+    type: "moving-border"
+  },
+};
