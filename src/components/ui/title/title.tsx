@@ -1,10 +1,6 @@
 import React from "react";
+import { TitleProps } from "../../../types/ui-props";
 import styles from "./title.module.scss";
-
-type TitleProps = {
-  tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  text: string;
-}
 
 const Title = (props: TitleProps) => {
   const { tag, text } = props;

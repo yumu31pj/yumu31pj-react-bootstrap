@@ -11,9 +11,10 @@
     }
   }
   &--h2 {
-    font-size: 2.8em;
+    font-size: 2.4em;
+    line-height: 1;
     @include g.media('tb') {
-      font-size: g.auto_clamp(28, 521, 36, 1440);
+      font-size: g.auto_clamp(24, 521, 36, 1440);
     }
   }
   &--h3 {
