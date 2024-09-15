@@ -66,7 +66,7 @@ export const Vertical: Story = {
   args: {
     postItems: [
       {
-        title: 'Post Title 3',
+        title: 'Post Title 3 Post Title 3 Post Title 3',
         date: "2024/09/03",
         linkTo: "#"
       },
