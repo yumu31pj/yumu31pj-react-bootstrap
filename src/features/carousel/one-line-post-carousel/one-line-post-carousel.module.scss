@@ -1,0 +1,29 @@
+.posts {
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px 0px;
+  border-radius: 10px;
+  display: block;
+  margin: 20px;
+  width: 100%;
+
+  &__container {
+    height: 44px;
+
+    &--vertical {
+      flex-direction: column;
+    }
+  }
+}
+
+.post {
+  display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  padding: 20px;
+
+  &__date {
+
+  }
+  &__title {
+  }
+}
