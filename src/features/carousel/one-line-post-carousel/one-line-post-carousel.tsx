@@ -33,7 +33,7 @@ const OneLinePostCarousel = (props: OneLinePostCarouselProps) => {
         {src === 'microcms' ? (
           // if src is microcms
           (postItems as ContentForIndexType[]).map((item: ContentForIndexType, key: number) => (
-            <a className={`embla__slide ${styles['post']}`} key={key} href={item.id}>
+            <a className={`embla__slide ${styles['post']}`} key={key} href={`${linkPath}${item.id}`}>
               <span className={styles['post__date']}>{getFormatedDateString(item.publishedAt)}</span>
               <span className={styles['post__title']}>{item.title}</span>
             </a>
