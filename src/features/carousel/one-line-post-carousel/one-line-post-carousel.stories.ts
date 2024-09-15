@@ -21,7 +21,7 @@ export const Default: Story = {
       {
         title: 'Post Title 3',
         date: "2024/09/03",
-        linkTo: "#"
+        linkTo: "#",
       },
       {
         title: 'Post Title 2',
@@ -34,6 +34,7 @@ export const Default: Story = {
         linkTo: "#"
       }
     ],
+    linkPath: "news/posts?id="
   },
 };
 
@@ -56,7 +57,8 @@ export const Horizon: Story = {
         linkTo: "#"
       }
     ],
-    direction: 'horizon'
+    direction: 'horizon',
+    linkPath: "news/posts?id="
   },
 };
 
@@ -79,6 +81,7 @@ export const Vertical: Story = {
         linkTo: "#"
       }
     ],
-    direction: 'vertical'
+    direction: 'vertical',
+    linkPath: "news/posts?id="
   },
 };

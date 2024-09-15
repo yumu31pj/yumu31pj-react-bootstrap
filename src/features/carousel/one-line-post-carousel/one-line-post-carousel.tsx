@@ -9,10 +9,11 @@ type OneLinePostCarouselProps = {
   postItems: PostIndexType[] | ContentForIndexType[];
   direction?: 'horizon' | 'vertical';
   src?: 'microcms';
+  linkPath?: string;
 }
 
 const OneLinePostCarousel = (props: OneLinePostCarouselProps) => {
-  const { postItems, direction, src } = props;
+  const { postItems, direction, src, linkPath } = props;
   let modifierClass = direction == 'vertical' ? "--vertical" : "--horizon";
 
   let optionAxis: 'x' | 'y' | undefined = 'x';
@@ -40,7 +41,7 @@ const OneLinePostCarousel = (props: OneLinePostCarouselProps) => {
         ) : (
           // if src is not microcms
           (postItems as PostIndexType[]).map((item: PostIndexType, key: number) => (
-            <a className={`embla__slide ${styles['post']}`} key={key} href={item.linkTo}>
+            <a className={`embla__slide ${styles['post']}`} key={key} href={`${linkPath}${item.linkTo}`}>
               <span className={styles['post__date']}>{getFormatedDateString(item.date)}</span>
               <span className={styles['post__title']}>{item.title}</span>
             </a>
