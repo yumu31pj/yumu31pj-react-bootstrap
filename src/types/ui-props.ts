@@ -23,6 +23,7 @@ export type PictureProps = {
   height?: number;
   altText: string;
   breakpoint?: number;
+  hasShade?: boolean;
 }
 
 export type PictureItemsProps = {
