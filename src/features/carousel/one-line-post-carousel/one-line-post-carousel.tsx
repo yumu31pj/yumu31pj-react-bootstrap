@@ -5,13 +5,13 @@ import { PostIndexType } from '../../../types/ui-props';
 import { getFormatedDateString } from '../../../utils/getFormatedDateString';
 import styles from "./one-line-post-carousel.module.scss";
 
-type FlashPostCarousel = {
+type OneLinePostCarouselProps = {
   postItems: PostIndexType[] | ContentForIndexType[];
   direction?: 'horizon' | 'vertical';
   src?: 'microcms';
 }
 
-const OneLinePostCarousel = (props: FlashPostCarousel) => {
+const OneLinePostCarousel = (props: OneLinePostCarouselProps) => {
   const { postItems, direction, src } = props;
   let modifierClass = direction == 'vertical' ? "--vertical" : "--horizon";
 
