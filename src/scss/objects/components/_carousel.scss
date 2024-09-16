@@ -2,12 +2,11 @@
   overflow: hidden;
   &__container {
     display: flex;
-      flex-direction: row;
       align-items: center;
 
-    &--vertical {
-      flex-direction: column;
-    }
+    // &--vertical {
+    //   flex-direction: column;
+    // }
   }
   &__slide {
     flex: 0 0 100%;

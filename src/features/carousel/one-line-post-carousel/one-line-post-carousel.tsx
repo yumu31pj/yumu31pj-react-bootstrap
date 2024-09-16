@@ -1,6 +1,6 @@
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ContentForIndexType } from '../../../types/microcms-types';
+import { ContentForIndexType } from '../../../types/post-types';
 import { PostIndexType } from '../../../types/ui-props';
 import { getFormatedDateString } from '../../../utils/getFormatedDateString';
 import styles from "./one-line-post-carousel.module.scss";

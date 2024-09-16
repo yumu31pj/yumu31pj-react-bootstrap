@@ -1,0 +1,44 @@
+@use "@globals" as g;
+
+.articles {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @include g.media('tb') {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.article {
+  width: calc((100% - 40px) / 2);
+
+  @include g.media('tb') {
+    width: calc((100% - 60px) / 3);
+  }
+
+  &__detail {
+    margin-top: 10px;
+  }
+
+  &__title {
+    font-weight: 700;
+    letter-spacing: .1em;
+    line-height: 1.25;
+  }
+
+  &__categories {
+    display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    margin: .5rem 0 ;
+    gap: .25rem 1rem;
+  }
+
+  &__category, &__date {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+}

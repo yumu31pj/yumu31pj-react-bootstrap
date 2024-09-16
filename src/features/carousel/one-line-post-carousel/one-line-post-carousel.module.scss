@@ -15,21 +15,24 @@
 
     &--vertical {
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 }
 
 .post {
   display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 10px;
   padding: 20px;
 
   @include g.media('tb') {
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
   }
 
   &__date {

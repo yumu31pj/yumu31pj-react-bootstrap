@@ -145,6 +145,10 @@ export type HamburgerButtonType = {
   toggleIsHamburgerOpen: React.MouseEventHandler<HTMLButtonElement>;
 }
 
+export type NoLinkButtonProps = {
+  buttonText: string;
+}
+
 /**
  * Layout
  */

@@ -1,0 +1,68 @@
+@use "@globals" as g;
+
+.link-card {
+  background-size: contain;
+  transition: all .5s ease-in-out;
+  width: 95vw;
+  height: 95vw;
+  position: relative;
+
+  &:hover {
+    opacity: .8;
+
+    & .link-card__inner {
+      & div {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        & span {
+          color: var(--color-white);
+        }
+        & span svg g line,
+        & span svg g polyline {
+          stroke: var(--color-white);
+          transition: stroke .5s ease-out;
+        }
+      }
+    }
+  }
+
+  @include  g.media('tb') {
+    width: 500px;
+    height: 500px;
+  }
+
+  &__inner {
+    color: var(--color-white);
+    font-weight: 700;
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    margin: 0 auto;
+    padding-top: 5%;
+    width: 80%;
+    height: 100%;
+
+    @include g.media('tb') {
+      gap: 40px;
+    }
+  }
+
+  &__title {
+    font-size: g.auto_clamp(24, 375, 40, 521);
+    @include g.media('tb') {
+      font-size: 4rem;
+    }
+  }
+
+  &__text {
+    font-size: g.auto_clamp(16, 375, 20, 521);
+    line-height: 1.2;
+    @include g.media('tb') {
+      font-size: 2rem;
+    }
+  }
+
+
+}

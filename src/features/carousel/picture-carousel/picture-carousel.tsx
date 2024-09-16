@@ -1,11 +1,11 @@
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
-import { Picture } from '../../components/ui/image';
-import { PictureItemsProps, PictureProps } from "../../types/ui-props";
+import { Picture } from '../../../components/ui/image';
+import { PictureItemsProps, PictureProps } from "../../../types/ui-props";
 import { CarouselProgressDot, useDotButton } from './carousel-progress-dot';
-import styles from "./carousel.module.scss";
+import styles from "./picture-carousel.module.scss";
 
-const Carousel = (props: PictureItemsProps) => {
+const PictureCarousel = (props: PictureItemsProps) => {
   const {pictureItems} = props;
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()])
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -46,4 +46,4 @@ const Carousel = (props: PictureItemsProps) => {
   )
 }
 
-export { Carousel };
+export default PictureCarousel;

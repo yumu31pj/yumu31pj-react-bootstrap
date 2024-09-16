@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Carousel } from './carousel';
+import PictureCarousel from './picture-carousel';
 
-const meta: Meta<typeof Carousel> = {
-  title: 'features/Carousel',
-  component: Carousel,
+const meta: Meta<typeof PictureCarousel> = {
+  title: 'features/Carousel/PictureCarousel',
+  component: PictureCarousel,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -12,7 +12,7 @@ const meta: Meta<typeof Carousel> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Carousel>;
+type Story = StoryObj<typeof PictureCarousel>;
 
 export const Default: Story = {
   args: {

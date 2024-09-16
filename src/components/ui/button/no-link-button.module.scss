@@ -1,0 +1,59 @@
+.button {
+  background-color: var(--color-white);
+  border-radius: 30px;
+  display: block;
+  padding: 10px 45px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background-color: var(--color-primary);
+    .button__text {
+      color: var(--color-white);
+      transition: all 0.5s ease-out;
+    }
+
+    .button__icon svg g line,
+    .button__icon svg g polyline {
+      stroke: var(--color-white);
+      transition: stroke .5s ease-out;
+    }
+  }
+
+  .button__text {
+    color: var(--color-black);
+    font-weight: 700;
+    transition: color 0.5s ease-out;
+  }
+
+  .button__icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 16px;
+      height: 10px;
+    }
+
+    svg g line {
+      stroke: var(--color-primary);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 2px;
+    }
+
+    svg g polyline {
+      stroke: var(--color-primary);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 2px;
+    }
+  }
+}
