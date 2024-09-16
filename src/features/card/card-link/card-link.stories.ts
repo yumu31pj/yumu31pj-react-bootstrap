@@ -18,7 +18,7 @@ export const Default: Story = {
   args: {
     cardItem: {
       title: "New Goods Arrival",
-      text: "New Goods has just released. You must like it!",
+      text: "New Goods has just released.<br>You must like it!",
       backgroundImage: "/src/assets/images/750x750_noimg.png",
       buttonText: "View More",
       linkTo: "#"
