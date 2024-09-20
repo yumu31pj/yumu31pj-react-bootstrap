@@ -1,0 +1,74 @@
+@use "@globals" as g;
+
+.conversations {
+  display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  width: 100%;
+}
+.conversation {
+  display: flex;
+  align-items: center;
+  gap: 15px 20px;
+  font-size: g.auto_clamp(16, 320, 24, 520);
+  // font-size: 2.4rem;
+
+  @include g.media('tb') {
+    font-size: 2.4rem;
+  }
+
+  & img {
+    width: 50px;
+    height: 50px;
+  }
+
+  & p {
+    border-radius: 20px;
+    padding: 5px 15px;
+    word-wrap: break-word;
+    position: relative;
+    width: calc(100% - 50px);
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+    }
+  }
+
+  &--odd {
+    flex-direction: row;
+    padding-right: 50px;
+
+    & p {
+      background-color: var(--color-canary);
+
+      &::before {
+        border: 10px solid transparent;
+        border-right: 15px solid var(--color-canary);
+        content: "";
+        transform: translate(-145%, -50%);
+        -webkit-transform: translate(-145%, -50%);
+        -ms-transform: translate(-145%, -50%);
+      }
+    }
+  }
+
+  &--even {
+    flex-direction: row-reverse;
+    padding-left: 50px;
+
+    & p {
+      background-color: var(--color-pink);
+
+      &::after {
+        border: 10px solid transparent;
+        border-left: 15px solid var(--color-pink);
+        content: "";
+        right: -20px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}

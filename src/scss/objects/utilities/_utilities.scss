@@ -1,0 +1,17 @@
+@use "@globals" as g;
+
+.br--sp {
+  display: block;
+
+  @include g.media('tb') {
+    display: none;
+  }
+}
+
+.br--pc {
+  display: none;
+
+  @include g.media('tb') {
+    display: block;
+  }
+}
