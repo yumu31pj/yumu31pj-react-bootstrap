@@ -1,0 +1,56 @@
+@use "@globals" as g;
+
+.banner-title {
+  display: flex;
+  width: 100%;
+  height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+  @include g.media('tb') {
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  @include g.media('pc') {
+    display: block;
+    position: relative;
+  }
+  
+  &__image {
+    width: 100%;
+    @include g.media('tb') {
+      width: 70%;
+    }
+  }
+
+  &__textwrapper {
+    background-color: var(--color-white);
+    box-sizing: border-box; 
+    padding: 15px;
+    transition: .5s all ease-out;
+    width: 100%;
+
+    @include g.media('tb') {
+      padding: 20px;
+      width: 40%;
+    }
+
+    @include g.media('pc') {
+      padding: 50px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    @include g.media('tb') {
+      margin-bottom: 30px;
+    }
+  }
+}
