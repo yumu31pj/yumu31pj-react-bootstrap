@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./field-wrapper.module.scss";
 
 type FieldWrapperProps = {
@@ -7,7 +6,7 @@ type FieldWrapperProps = {
 
 const FieldWrapper = (props: FieldWrapperProps) => {
   const {children} = props;
-  const [isConfirmed, setIsConfirmed] = useState(false);
+  // const [isConfirmed, setIsConfirmed] = useState(false);
 
   return (
     <div className={styles['field-wrapper']}>

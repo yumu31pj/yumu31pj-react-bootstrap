@@ -1,7 +1,7 @@
-import { ContentForIndexType } from "../../types/post-types";
-import { PictureProps } from "../../types/ui-props";
-import { getFormatedDateString } from "../../utils/getFormatedDateString";
-import FluffyPicture from "../image/FluffyPicture/fluffy-picture";
+import { ContentForIndexType } from "../../../types/post-types";
+import { PictureProps } from "../../../types/ui-props";
+import { getFormatedDateString } from "../../../utils/getFormatedDateString";
+import FluffyPicture from "../../image/FluffyPicture/fluffy-picture";
 import styles from "./article-cards.module.scss";
 
 type AritcleCardProp = ContentForIndexType & {

@@ -14,7 +14,7 @@ type OneLinePostCarouselProps = {
 
 const OneLinePostCarousel = (props: OneLinePostCarouselProps) => {
   const { postItems, direction, src, linkPath } = props;
-  let modifierClass = direction == 'vertical' ? "--vertical" : "--horizon";
+  const modifierClass = direction == 'vertical' ? "--vertical" : "--horizon";
 
   let optionAxis: 'x' | 'y' | undefined = 'x';
   if (direction == 'horizon') {

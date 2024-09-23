@@ -1,0 +1,26 @@
+@use "@globals" as g;
+
+.articles {
+  display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  gap: 30px;
+
+  @include g.media('tb') {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+.article-wrapper {
+  width: 100%;
+
+  @include g.media('tb') {
+    width: calc((100% - 15px) / 2);
+  }
+
+  @include g.media('pc') {
+    width: calc((100% - 30px) / 3);
+  }
+}
