@@ -24,7 +24,7 @@ const TitleBandArticle = (props: TitleBandArticleProps) => {
           breakpoint={imageItem.breakpoint}
         />
       </div>
-      <p className={styles['article__title']}>{linkItem.linkText}</p>
+      <p className={styles['article__title']}><span>{linkItem.linkText}</span></p>
     </a>
   )
 }

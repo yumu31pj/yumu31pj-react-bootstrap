@@ -9,6 +9,10 @@
 
   @include g.media('tb') {
     flex-direction: row;
+    gap: 10px;
+  }
+
+  @include g.media('pc') {
     gap: 15px;
   }
 }

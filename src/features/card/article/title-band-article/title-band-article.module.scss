@@ -1,3 +1,5 @@
+@use "@globals" as g;
+
 .article {
   display: block;
   position: relative;
@@ -28,20 +30,32 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
-      transition: transform .3s ease-out;
+      transition: transform .5s ease-out;
     }
   }
   &__title {
     background-color: rgba(35, 89, 161, .7);
-    color: var(--color-white);
-    font-size: 1.8rem;
-    line-height: 1.2;
-    padding: 25px 30px;
-    width: 100%;
-    max-height: 30%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    // z-index: 3;
+    display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      width: 100%;
+      height: 25%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      @include g.media('pc') {
+        padding: 25px 30px;
+      }
+      
+      & span {
+        color: var(--color-white);
+        font-size: g.auto_clamp(15, 320, 18, 960);
+        line-height: 1.2;
+
+        @include g.media('pc') {
+          font-size: 1.8rem;
+        }
+      }
   }
 }
