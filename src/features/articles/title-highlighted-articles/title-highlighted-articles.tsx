@@ -1,5 +1,6 @@
 import { Picture } from "../../../components/ui/image";
 import { LinkProps, PictureProps } from "../../../types/ui-props";
+import { getFormatedDateString } from "../../../utils/getFormatedDateString";
 import styles from "./title-highlighted-articles.module.scss";
 
 type TitleHighlightedArticlesProps = {
@@ -52,7 +53,7 @@ const TitleHighlightedArticle = (props: TitleHighlightedArticleProps) => {
           <p className={styles['article__title']}>
             <span>{linkItem.linkText}</span>
           </p>
-          <div className={styles['article__date']}>{date}</div>
+          <div className={styles['article__date']}>{getFormatedDateString(date)}</div>
         </div>
       </a>
     </div>
