@@ -53,7 +53,7 @@ export default tseslint.config({
 # Coding Rules
 ## Font size
 - h2: 36px(PC), 28px(SP)
-- h3: 28px(SP), 24px(SP)
+- h3: 28px(PC), 24px(SP)
 - h4: 24px(PC), 20px(SP)
 - h5: 20px(PC), 18px(sp)
 - h6: 18px(PC), 16px(SP)
