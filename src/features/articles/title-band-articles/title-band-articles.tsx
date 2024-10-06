@@ -1,6 +1,5 @@
 import { Picture } from "../../../components/ui/image";
 import { LinkProps, PictureProps } from "../../../types/ui-props";
-import TitleBandArticle, { TitleBandArticleProps } from "../../card/article/title-band-article/title-band-article";
 import styles from "./title-band-articles.module.scss";
 
 type TitleBandArticleProps = {

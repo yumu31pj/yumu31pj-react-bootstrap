@@ -91,6 +91,20 @@
     transform: translateX(-50%);
   }
 
+  &__image {
+    display: block;
+    overflow: hidden;
+    
+    & img {
+      transition: all .5s ease-out;
+    }
+  }
+
+  &:hover .article__image img {
+    transform: scale(1.2);
+  }
+
+
   &__detail {
     display: flex;
       flex-wrap: wrap;

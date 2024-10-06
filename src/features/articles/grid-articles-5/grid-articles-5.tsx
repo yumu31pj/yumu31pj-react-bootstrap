@@ -21,9 +21,9 @@ const GridArticlesFive = (props: GridArticlesFiveProps) => {
     <div className={styles['grid-articles']}>
 
       {articles.map((article: GridArticleFiveProps, key: number) => (
-        <div className={styles['article']}>
+        <div className={styles['article']} key={key}>
           <div className={styles['article__inner']}>
-            <a href={article.linkTo}>
+            <a href={article.linkTo} className={styles['article__image']}>
               <Picture
                 srcSP={article.imageItem.srcSP}
                 srcWebpSP={article.imageItem.srcWebpSP}
