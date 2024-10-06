@@ -1,0 +1,121 @@
+@use "@globals" as g;
+
+.grid-articles {
+  display: flex;
+    flex-wrap: wrap;
+
+  @include g.media('tb') {
+    display: grid;
+    grid-template-columns: 45% 1fr 1fr; 
+    grid-template-rows: auto auto;
+    gap: 1px;
+  }
+  
+
+  & > .article:nth-child(1) {
+    width: 100%;
+
+    @include g.media('tb') {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 2;
+    }
+  }
+
+  & > .article:not(:first-child) {
+    width: 50%;
+    @include g.media(tb) {
+      grid-auto-flow: row;
+      width: 100%;
+    }
+  }
+}
+
+.article {
+  padding: 20px;
+  position: relative;
+
+  &::before, &::after,
+  &__inner::before, &__inner::after {
+    background-color: var(--color-black);
+    content: '';
+    position: absolute;
+  }
+  
+  &::before {
+    width: .1rem;
+    height: calc(100% - .8rem);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &:nth-of-type(1)::after,
+  &:nth-of-type(3)::after,
+  &:nth-of-type(5)::after {
+    width: .1rem;
+    height: calc(100% - .8rem);
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  &:nth-of-type(1)::after {
+    @include g.media('tb') {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__inner::before {
+    width: calc(100% - .8rem);
+    height: .1rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:nth-of-type(1) .article__inner::after {
+    @include g.media('tb') {
+      width: calc(100% - .8rem);
+      height: .1rem;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &:nth-of-type(4) .article__inner::after,
+  &:nth-of-type(5) .article__inner::after {
+    width: calc(100% - .8rem);
+    height: .1rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__detail {
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0 1rem;
+    margin-top: 15px;
+  }
+
+  &__category {
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: .1rem .5rem;
+  }
+
+  &__date {
+    font-size: 1.2rem;
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: .5rem;
+    width: 100%;
+  }
+}
