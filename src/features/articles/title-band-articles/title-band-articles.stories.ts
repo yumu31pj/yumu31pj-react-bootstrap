@@ -3,7 +3,7 @@ import TitleBandArticles from './title-band-articles';
 
 
 const meta: Meta<typeof TitleBandArticles> = {
-  title: 'features/ArticleCards/TitleBandArticles',
+  title: 'features/Articles/TitleBandArticles',
   component: TitleBandArticles,
   tags: ['autodocs'],
   parameters: {

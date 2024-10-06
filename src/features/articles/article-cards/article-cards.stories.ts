@@ -3,7 +3,7 @@ import ArticleCards from './article-cards';
 
 
 const meta: Meta<typeof ArticleCards> = {
-  title: 'features/ArticleCards/ArticleCards',
+  title: 'features/Articles/ArticleCards',
   component: ArticleCards,
   tags: ['autodocs'],
   parameters: {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import GridArticlesFive from './grid-articles-5';
 
 const meta: Meta<typeof GridArticlesFive> = {
-  title: 'features/ArticleCards/GridArticlesFive',
+  title: 'features/Articles/GridArticlesFive',
   component: GridArticlesFive,
   tags: ['autodocs'],
   parameters: {

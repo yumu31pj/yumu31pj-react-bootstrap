@@ -3,7 +3,7 @@ import TitleHighlightedArticles from './title-highlighted-articles';
 
 
 const meta: Meta<typeof TitleHighlightedArticles> = {
-  title: 'features/ArticleCards/TitleHighlightedArticles',
+  title: 'features/Articles/TitleHighlightedArticles',
   component: TitleHighlightedArticles,
   tags: ['autodocs'],
   parameters: {

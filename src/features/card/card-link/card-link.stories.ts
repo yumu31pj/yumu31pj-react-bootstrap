@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import CardLink from './card-link';
 
 const meta: Meta<typeof CardLink> = {
-  title: 'features/Cards/CardLink',
+  title: 'features/Card/CardLink',
   component: CardLink,
   tags: ['autodocs'],
   parameters: {
