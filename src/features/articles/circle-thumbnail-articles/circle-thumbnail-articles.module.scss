@@ -1,0 +1,73 @@
+@use "@globals" as g;
+
+.articles {
+  display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  @include g.media('tb') {
+    column-gap: 15px;
+    row-gap: 50px;
+  }
+
+  @include g.media('pc') {
+    column-gap: 25px
+  }
+
+  & * {
+    transition: all .5s ease-out;
+  }
+}
+
+.article {
+  width: 100%;
+  
+  @include g.media('tb') {
+    width: calc(50% - 25px);
+  }
+  &__link {
+    display: flex;
+      align-items: center;
+      justify-content: flex-start;
+  }
+  &__image {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+
+    @include g.media('tb') {
+      width: 90px;
+      height: 90px;
+    }
+
+    @include g.media('pc') {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  &__detail {
+    padding-left: 15px;
+    width: calc(100% - 60px);
+
+    @include g.media('tb') {
+      // padding-left: 15px;
+      width: calc(100% - 90px);
+    }
+
+    @include g.media('pc') {
+      padding-left: 30px;
+      width: calc(100% - 120px);
+    }
+  }
+  &__title {
+    font-size: 1.6rem;
+    
+    @include g.media('tb') {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+  }
+  &__date {
+    font-size: 1.3rem;
+  }
+}
