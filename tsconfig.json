@@ -3,9 +3,10 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "~/*": ["src/*"],
+      "~/*": ["public/*"],
       "@globals/*": ["src/scss/globals/*"]
-    }
+    },
+    "lib": ["DOM", "ESNext"]
   },
   "files": [],
   "references": [

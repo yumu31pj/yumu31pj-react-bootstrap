@@ -1,6 +1,6 @@
 import React from "react";
-import useScrollInView from "../../../hooks/useScrollInView";
-import { WrapperProps } from "../../../types/ui-props";
+import useScrollInView from "../../hooks/useScrollInView";
+import { WrapperProps } from "../../types/ui-props";
 import styles from "./scroll-in-wrapper.module.scss";
 
 const ScrollInWrapper = (props: WrapperProps) => {

@@ -23,6 +23,12 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: ['@/features/*/*'],
+        },
+      ],
     },
     settings: {
       'import/resolver': {
@@ -36,11 +42,5 @@ export default tseslint.config(
         },
       },
     },
-    'no-restricted-imports': [
-      'error',
-      {
-        patterns: ['@/features/*/*'],
-      },
-    ],
   },
 )
