@@ -1,0 +1,60 @@
+@use "@globals" as g;
+
+.colors {
+  display: flex;
+  // gap: 10px;
+}
+
+.color {
+  width: calc(100vw / 10);
+  height: calc(100vw / 10);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--0 { 
+    background-color: g.color_scale(gray, 0); 
+    color: g.color_scale(#000, 100);
+  }
+  &--10 { 
+    background-color: g.color_scale(gray, 10);
+    color: g.color_scale(#000, 80);
+  }
+  &--20 { 
+    background-color: g.color_scale(gray, 20); 
+    color: g.color_scale(#000, 60);
+  }
+  &--30 { 
+    background-color: g.color_scale(gray, 30); 
+    color: g.color_scale(#000, 40);
+  }
+  &--40 { 
+    background-color: g.color_scale(gray, 40); 
+    color: g.color_scale(#000, 20);
+  }
+  &--50 { 
+    background-color: g.color_scale(gray, 50); 
+    color: g.color_scale(#000, 0);
+  }
+  &--60 { 
+    background-color: g.color_scale(gray, 60); 
+    color: g.color_scale(#fff, 40);
+  }
+  &--70 { 
+    background-color: g.color_scale(gray, 70); 
+    color: g.color_scale(#fff, 30);
+  }
+  &--80 { 
+    background-color: g.color_scale(gray, 80); 
+    color: g.color_scale(#fff, 20);
+  }
+  &--90 { 
+    background-color: g.color_scale(gray, 90); 
+    color: g.color_scale(#fff, 10);
+  }
+  &--100 { 
+    background-color: g.color_scale(gray, 100); 
+    color: g.color_scale(#fff, 0);
+  }
+}

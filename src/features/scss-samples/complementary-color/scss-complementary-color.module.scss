@@ -1,0 +1,22 @@
+@use "@globals" as g;
+
+.colors {
+  display: flex;
+}
+
+.color {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  font-size: 3vw;
+  font-weight: 700;
+  width: calc(100vw / 2);
+  height: calc(100vw / 2);
+  
+  &--base {
+    background: #ff0000;
+  }
+  &--complementary {
+    background: g.complementary_color(#ff0000);
+  }
+}
