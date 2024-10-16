@@ -1,6 +1,6 @@
 import parse from "html-react-parser";
 import { useState } from "react";
-import { FaqJsonLd } from "../../components/embed/json-ld/faq-json-ld";
+import { FaqJsonLd } from "../../components/ui/embed";
 import { FAQListProps, FAQTextProps } from "../../types/ui-props";
 import styles from "./faq.module.scss";
 

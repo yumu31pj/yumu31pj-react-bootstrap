@@ -8,7 +8,7 @@ export type CustomPictureProps = PictureProps & {
 }
 
 const CustomPicture = (props: CustomPictureProps) => {
-  const {srcPC, srcSP, srcWebpPC, srcWebpSP, width, height, altText, breakpoint, hasShade} = props;
+  const {srcPC, srcSP, srcWebpPC, srcWebpSP, width, height, altText, breakpoint, hasShade, isLazy, isPreload} = props;
   const baseClass = 'custom-picture';
   const modifierClass = hasShade? baseClass + "--shade" : "";
 
@@ -24,6 +24,8 @@ const CustomPicture = (props: CustomPictureProps) => {
         altText={altText}
         breakpoint={breakpoint}
         hasShade={hasShade}
+        isLazy={isLazy}
+        isPreload={isPreload}
       />
     </div>
   )

@@ -2,7 +2,7 @@ import { PictureProps } from "../../../types/ui-props";
 import styles from "./picture.module.scss";
 
 const Picture = (props: PictureProps) => {
-  const {srcPC, srcSP, srcWebpPC, srcWebpSP, width, height, altText, breakpoint} = props;
+  const {srcPC, srcSP, srcWebpPC, srcWebpSP, width, height, altText, breakpoint, isPreload, isLazy} = props;
   return (
     <picture className={styles['responsive-image']}>
       {srcWebpPC && <source srcSet={srcWebpPC} media={`(min-width: ${breakpoint}px)`} type="image/webp" />}
@@ -12,7 +12,10 @@ const Picture = (props: PictureProps) => {
         src={srcSP} 
         {...(width && { width: width })} 
         {...(height && { height: height })} 
-        alt={altText} />
+        alt={altText} 
+        fetchPriority={isPreload ? "high" : undefined}
+        loading={isLazy ? "lazy": undefined}
+      />
     </picture>
   )
 }

@@ -24,6 +24,8 @@ export type PictureProps = {
   altText: string;
   breakpoint?: number;
   hasShade?: boolean;
+  isPreload?: boolean;
+  isLazy?: boolean;
 }
 
 export type PictureItemsProps = {
