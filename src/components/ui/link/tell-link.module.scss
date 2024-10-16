@@ -1,0 +1,41 @@
+.tel {
+  display: block;
+  font-size: 2rem;
+  
+  &--has-icon {
+    font-weight: 700;
+    padding-left: 25px;
+    position: relative;
+
+    &::before {
+      background-color: var(--color-white);
+      content: "";
+      mask: url('../../../assets/svg/phone.svg') no-repeat center;
+      mask-size: contain;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+  &--primary {
+    color: var(--color-primary);
+    &::before {
+      background-color: var(--color-primary);
+    }
+  }
+  &--primary {
+    color: var(--color-primary);
+    &::before {
+      background-color: var(--color-primary);
+    }
+  }
+  &--accent {
+    color: var(--color-accent);
+    &::before {
+      background-color: var(--color-accent);
+    }
+  }
+}
