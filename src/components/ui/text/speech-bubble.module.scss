@@ -1,0 +1,28 @@
+@use "@globals" as g;
+
+.speech-bubble {
+  background-color: var(--color-primary);
+  border-radius: 30px;
+  color: var(--color-white);
+  line-height: 1.5;
+  padding: 10px 24px;
+  text-align: center;
+  width: 280px;
+  position: relative;
+  transition: all .5s ease-out;
+
+  @include g.media('tb') {
+    padding: 10px 50px;
+    width: 560px;
+  }
+
+  &::after {
+    content: "";
+    border: 10px solid transparent;
+    border-top: 10px solid var(--color-primary);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
