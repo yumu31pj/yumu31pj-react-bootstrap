@@ -1,0 +1,120 @@
+@use "@globals" as g;
+
+.nav {
+  display: none;
+  @include g.media('pc') {
+    display: block;
+    width: 100%;
+  }
+}
+
+.nav-menu {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__item {
+      width: calc(100% / 5);
+
+      &--current span {
+        position: relative;
+
+        &::after {
+          background-color: var(--color-primary);
+          content: "";
+          width: 90%;
+          height: 3px;
+          position: absolute;
+          bottom: -3px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    
+    &__item > a {
+      display: block;
+      text-align: center;
+      padding: 10px 10px;
+    position: relative;
+
+    @include g.media('pc') {
+      padding: 10px 20px;
+    }
+
+    &::after {
+      background-color: var(--color-black);
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__item:first-child a::before {
+    background-color: var(--color-black);
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__item-has-sub > span {
+    position: relative;
+    padding-right: 20px;
+
+    &::after {
+      border: 1px solid;
+      border-color:  transparent transparent var(--color-black) var(--color-black);
+      content: "";
+      width: 8px;
+      height: 8px;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 5px;
+      right: 0;
+    }
+  }
+  &__item:hover {
+    background-color: var(--color-primary);
+    position: relative;
+    & a {
+      color: var(--color-white);
+    }
+    & .nav-menu__item-has-sub > span::after {
+      border-color:  transparent transparent var(--color-white) var(--color-white);
+      transform: rotate(135deg);
+      top: 5px;
+    }
+    & .sub-menu {
+      visibility: visible;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      
+      &__item {
+        background-color: var(--color-primary);
+        border-top: 1px solid var(--color-white);
+        text-align: center;
+        padding: 10px 30px;
+        
+        &:hover {
+          background-color: var(--color-white);
+          border: 1px solid var(--color-primary);
+
+          & span {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.sub-menu {
+  visibility: hidden;
+  position: absolute;
+}
