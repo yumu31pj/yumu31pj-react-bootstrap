@@ -11,8 +11,8 @@ type ModalState = {
 // Initial State for Modal
 const initialState: ModalState = {
   contact: true,
-  faq: false,
-  confirm: false,
+  faq: true,
+  confirm: true,
 };
 
 // Define Action
